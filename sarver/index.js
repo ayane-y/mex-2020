@@ -24,7 +24,12 @@ io.on('connection', (socket) => {
 		console.log('ユーザーからのメッセージを受信しました',msg);
 		// このサーバーに接続しているユーザーに受信したメッセージを配信します
 		io.emit('button0Click', msg * 100);
-	});
+    });
+    
+    socket.on('button1Click',(msg) =>{
+        console.log('ユーザーからのメッセージを受信しました',msg);
+        io.emit('button1Click',msg * 1000);
+    });
 });
 httpServer.listen(3000, function(){
   console.log('サーバーが起動しました。URLは http://localhost:3000 です');

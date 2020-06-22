@@ -12,6 +12,7 @@
   <script>
     const socket = io();
     const button0 = document.querySelector('#send-button-0');
+    const button1 = document.querySelector('#send-button-1');
     
     button0.addEventListener('click',function(){
         socket.emit('button0Click',1);
@@ -21,6 +22,15 @@
         console.log('サーバーからデータを受信しました',msg);
         document.body.append(msg);
     });
+
+    button1.addEventListener('click',function(){
+        socket.emit('button1Click',1);
+    });
+
+    socket.on('button1Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    })
   </script>
 </body>
 </html>
