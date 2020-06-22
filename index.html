@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Example-1 | チャットサービスを作る</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+</head>
+<body>
+  <button id="send-button-0">送信 0</button>
+  <button id="send-button-1">送信 1</button>
+  <script>
+    const socket = io();
+    const button0 = document.querySelector('#send-button-0');
+    
+    button0.addEventListener('click',function(){
+        socket.emit('button0Click',1);
+    });
+
+    socket.on('button0Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+  </script>
+</body>
+</html>

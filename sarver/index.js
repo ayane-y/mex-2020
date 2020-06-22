@@ -1,18 +1,31 @@
 const express = require('express');
+// http, path は最初からインストールされているライブラリなので $ npm install不要
 const http = require('http');
-
+const path = require('path');
+const SocketServer = require('socket.io');
 const app = express();
 const httpServer = http.Server(app);
-
-app.get('/',function(req,res){
-    res.send('トップページ');
+// httpServer を元に WebSocket（リアルタイム通信）用のIOを作成
+const io = new SocketServer(httpServer);
+app.get('/', (req, res) => {
+  // ひとつ上のディレクトリにある index.html を返します
+  const file = path.join(__dirname, '../index.html');
+  res.sendFile(file);
 });
-
-app.get('/test',function(req,res){
-    res.send('テストページ');
+app.get('/test', (req, res) => {
+  res.send('test');
 });
-
-httpServer.listen(3000,function(){
-    console.log('サーバーを起動しました。');
+io.on('connection', (socket) => {
+	// ユーザーが新規に接続された時にこの中が実行されます
+	console.log('ユーザーが接続しました');
+	// ユーザーからメッセージを受信した時の処理を.on で登録します
+	socket.on('button0Click', (msg) => {
+		// ユーザーからメッセージを受信した時の処理
+		console.log('ユーザーからのメッセージを受信しました',msg);
+		// このサーバーに接続しているユーザーに受信したメッセージを配信します
+		io.emit('button0Click', msg * 100);
+	});
 });
-
+httpServer.listen(3000, function(){
+  console.log('サーバーが起動しました。URLは http://localhost:3000 です');
+});
