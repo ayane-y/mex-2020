@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script type="text/javascript" src="/shared/js/p5.min.js"></script>
+</head>
+<body>
+    <h1>Contents</h1>
+    <script>
+        const socket = io();
+        let diameter = 0;
+
+        socket.on('diameter',function(msg){
+          console.log('サーバーからデータを受信しました',msg);
+          diameter = msg;
+        });
+
+        function setup() {
+          createCanvas(400, 400);
+        }   
+
+        function draw() {
+          background(220);
+          circle(width / 2, height / 2, diameter);
+        }
+    </script>
+</body>
+</html>

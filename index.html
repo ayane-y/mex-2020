@@ -16,6 +16,7 @@
     
     button0.addEventListener('click',function(){
         socket.emit('button0Click',1);
+        socket.emit('diameter',1);
     });
 
     socket.on('button0Click',function(msg){
