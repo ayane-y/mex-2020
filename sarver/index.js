@@ -87,7 +87,7 @@ io.on('connection', (socket) => {
     io.emit('diameter2',diameter2);
   };
   
-  setInterval( reset, 1000 * 10 );
+  setInterval( reset, 1000 * 20 );
 });
 
 httpServer.listen(3003, function(){
