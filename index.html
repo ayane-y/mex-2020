@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Example-1 | チャットサービスを作る</title>
+  <title>Three Buttons</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
 </head>
 <body>
-  <button id="send-button-0">送信 0</button>
-  <button id="send-button-1">送信 1</button>
+  <button id="send-button-0">RED</button>
+  <button id="send-button-1">BLUE</button>
+  <button id="send-button-2">YELLOW</button>
   <script>
     const socket = io();
     const button0 = document.querySelector('#send-button-0');
     const button1 = document.querySelector('#send-button-1');
+    const button2 = document.querySelector('#send-button-2');
     
+    //RED
     button0.addEventListener('click',function(){
         socket.emit('button0Click',1);
         socket.emit('diameter',1);
@@ -24,14 +27,27 @@
         document.body.append(msg);
     });
 
+    //BLUE
     button1.addEventListener('click',function(){
         socket.emit('button1Click',1);
+        socket.emit('diameter1',1);
     });
 
     socket.on('button1Click',function(msg){
         console.log('サーバーからデータを受信しました',msg);
         document.body.append(msg);
-    })
+    });
+
+    //YELLOW
+    button2.addEventListener('click',function(){
+        socket.emit('button2Click',1);
+        socket.emit('diameter2',1);
+    });
+
+    socket.on('button2Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
   </script>
 </body>
 </html>

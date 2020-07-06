@@ -1,31 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Three colors</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
     <script type="text/javascript" src="/shared/js/p5.min.js"></script>
 </head>
 <body>
-    <h1>Contents</h1>
+    <h1>Three colors</h1>
     <script>
         const socket = io();
         let diameter = 0;
+        let diameter1 = 0;
+        let diameter2 = 0;
 
         socket.on('diameter',function(msg){
-          console.log('サーバーからデータを受信しました',msg);
+          console.log('サーバーから赤データを受信しました',msg);
           diameter = msg;
         });
 
-        function setup() {
-          createCanvas(400, 400);
-        }   
+        socket.on('diameter1',function(msg){
+          console.log('サーバーから青データを受信しました',msg);
+          diameter1 = msg;
+        });
+
+        socket.on('diameter2',function(msg){
+          console.log('サーバーから黄データを受信しました',msg);
+          diameter2 = msg;
+        });
+
+        function setup() { 
+        createCanvas(640, 1080);
+        }
+
 
         function draw() {
-          background(220);
-          circle(width / 2, height / 2, diameter);
-        }
+        createCanvas(640, 1080);
+
+        fill(240, 0, 0);
+        strokeJoin(ROUND);
+        strokeWeight(10);
+        stroke(240, 0, 0);
+        rect(11, 0, 191, diameter);
+
+        fill(0, 0, 240);
+        strokeJoin(ROUND);
+        strokeWeight(10);
+        stroke(0, 0, 240);
+        rect(216, 0, 191, diameter1);
+
+        fill(240, 240, 0);
+        strokeJoin(ROUND);
+        strokeWeight(10);
+        stroke(240, 240, 0);
+        rect(422, 0, 191, diameter2);
+
+      }
+
     </script>
 </body>
 </html>
