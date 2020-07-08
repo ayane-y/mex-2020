@@ -1,6 +1,13 @@
 {
+  "scripts": {
+    "launch": "pm2 start index.js --name ayane.ga",
+    "dev": "pm2 start index.js --name ayane.ga --watch",
+    "log": "pm2 logs ayane.ga",
+    "delete": "pm2 delete ayane.ga"
+  },
   "dependencies": {
     "express": "^4.17.1",
+    "pm2": "^4.4.0",
     "socket.io": "^2.3.0"
   }
 }
