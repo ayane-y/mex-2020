@@ -6,10 +6,21 @@
     <title>Three colors</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
     <script type="text/javascript" src="/shared/js/p5.min.js"></script>
+    <script type="text/javascript" src="/shared/js/lottie.min.js"></script>
 </head>
 <body>
     <h1>Three colors</h1>
+    <div id="lottie"></div>
     <script>
+        const animation = bodymovin.loadAnimation({
+          container: document.getElementById('lottie'), 
+          renderer: 'svg', // 描画形式
+          loop: false, // trueにしたらループ。1回再生の場合はfalse
+          autoplay: false, // 自動再生
+          path: '/shared/json/star.json', // jsonのパスを指定
+          name: "Star",
+        });
+
         const socket = io();
         let diameter = 0;
         let diameter1 = 0;
@@ -17,6 +28,7 @@
 
         socket.on('diameter',function(msg){
           console.log('サーバーから赤データを受信しました',msg);
+          animation.goToAndPlay(0);
           diameter = msg;
         });
 
