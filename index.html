@@ -3,14 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="index.css">
   <title>Three Buttons</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
 </head>
 <body>
-  <INPUT type="button" value="RED" id="send-button-0" style="WIDTH: 1000px; HEIGHT: 600px; background-color: red;">
-  <INPUT type="button" value="BLUE" id="send-button-1" style="WIDTH: 1000px; HEIGHT: 600px; background-color: BLUE;">
-  <INPUT type="button" value="YELLOW" id="send-button-2" style="WIDTH: 1000px; HEIGHT: 600px; background-color: YELLOW;">
-    
+
+  <input type="submit" value="0" id="send-button-0">
+  <input type="submit" value="1" id="send-button-1">
+  <input type="submit" value="2" id="send-button-2">
+
   <script>
     const socket = io();
     const button0 = document.querySelector('#send-button-0');
