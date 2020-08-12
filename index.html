@@ -3,14 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="shared/css/index.css">
   <title>Three Buttons</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
 </head>
 <body>
-  <INPUT type="button" value="RED" id="send-button-0" style="WIDTH: 1000px; HEIGHT: 600px; background-color: red;">
-  <INPUT type="button" value="BLUE" id="send-button-1" style="WIDTH: 1000px; HEIGHT: 600px; background-color: BLUE;">
-  <INPUT type="button" value="YELLOW" id="send-button-2" style="WIDTH: 1000px; HEIGHT: 600px; background-color: YELLOW;">
-    
+
+  <button type="button" value="0" id="send-button-0" class="btn-square">0</button>
+  <button type="button" value="1" id="send-button-1" class="btn-square">1</button>
+  <button type="button" value="2" id="send-button-2" class="btn-square">2</button>
+  <button type="button" value="3" id="send-button-3" class="btn-square">3</button>
+  <button type="button" value="4" id="send-button-4" class="btn-square">4</button>
+  <button type="button" value="5" id="send-button-5" class="btn-square">5</button>
+  <button type="button" value="6" id="send-button-6" class="btn-square">6</button>
+  <button type="button" value="7" id="send-button-7" class="btn-square">7</button>
+  <button type="button" value="8" id="send-button-8" class="btn-square">8</button>
+  <button type="button" value="9" id="send-button-9" class="btn-square">9</button>
+  <button type="button" value="10" id="send-button-10" class="btn-square">10</button>
+
   <script>
     const socket = io();
     const button0 = document.querySelector('#send-button-0');

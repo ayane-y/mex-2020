@@ -1,0 +1,19 @@
+  body{
+   background: rgb(243, 209, 209);
+  }
+
+  .btn-square { 
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 50px;
+    background: rgb(243, 209, 209);/*ボタン色*/
+    color: #799dec;
+    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;
+  }
+  .btn-square:active {
+    transform: translateY(4px);/*下に動く*/
+    top: 4px;
+    text-shadow: none;
+  }
