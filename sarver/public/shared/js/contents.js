@@ -12,17 +12,20 @@ const animation = bodymovin.loadAnimation({
   let diameter1 = 0;
   let diameter2 = 0;
 
+  //RED 0
   socket.on('diameter',function(msg){
     console.log('サーバーから赤データを受信しました',msg);
     animation.goToAndPlay(0);
     diameter = msg;
   });
 
+  //BLUE 1
   socket.on('diameter1',function(msg){
     console.log('サーバーから青データを受信しました',msg);
     diameter1 = msg;
   });
 
+  //YELLOW 2
   socket.on('diameter2',function(msg){
     console.log('サーバーから黄データを受信しました',msg);
     diameter2 = msg;

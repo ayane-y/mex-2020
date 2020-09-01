@@ -34,13 +34,13 @@ io.on('connection', (socket) => {
 	// ユーザーが新規に接続された時にこの中が実行されます
   console.log('ユーザーが接続しました');
   
-//RED
+//RED 0
   // ユーザーからメッセージを受信した時の処理を.on で登録します
 	socket.on('button0Click', (msg) => {
 		// ユーザーからメッセージを受信した時の処理
-		console.log('ユーザーからの赤メッセージを受信しました',msg);
+		console.log('ユーザーから0を受信しました',msg);
 		// このサーバーに接続しているユーザーに受信したメッセージを配信します
-		io.emit('button0Click', msg = 'R');
+		io.emit('button0Click', msg = '0');
   });
 
   socket.on('diameter',(msg) =>{
@@ -50,10 +50,10 @@ io.on('connection', (socket) => {
   });
 
     
-//BLUE
+//BLUE 1
   socket.on('button1Click',(msg) =>{
-    console.log('ユーザーからの青メッセージを受信しました',msg);
-    io.emit('button1Click',msg = 'B');
+    console.log('ユーザーから1を受信しました',msg);
+    io.emit('button1Click',msg = '1');
   });
 
   socket.on('diameter1',(msg) =>{
@@ -62,10 +62,10 @@ io.on('connection', (socket) => {
     io.emit('diameter1',diameter1);
   });
 
-  //YELLOW
+  //YELLOW 2
   socket.on('button2Click',(msg) =>{
-    console.log('ユーザーからの黄メッセージを受信しました',msg);
-    io.emit('button2Click',msg = 'Y');
+    console.log('ユーザーから2を受信しました',msg);
+    io.emit('button2Click',msg = '2');
   });
 
   socket.on('diameter2',(msg) =>{
@@ -88,6 +88,56 @@ io.on('connection', (socket) => {
   };
   
   //setInterval( reset, 1000 * 20 );
+
+  //3
+  socket.on('button3Click',(msg) =>{
+    console.log('ユーザーから3を受信しました',msg);
+    io.emit('button3Click',msg = '3');
+  });
+
+  //4
+  socket.on('button4Click',(msg) =>{
+    console.log('ユーザーから4を受信しました',msg);
+    io.emit('button4Click',msg = '4');
+  });
+
+  //5
+  socket.on('button5Click',(msg) =>{
+    console.log('ユーザーから5を受信しました',msg);
+    io.emit('button5Click',msg = '5');
+  });
+
+  //6
+  socket.on('button6Click',(msg) =>{
+    console.log('ユーザーから6を受信しました',msg);
+    io.emit('button6Click',msg = '6');
+  });
+
+  //7
+  socket.on('button7Click',(msg) =>{
+    console.log('ユーザーから7を受信しました',msg);
+    io.emit('button7Click',msg = '7');
+  });
+
+  //8
+  socket.on('button8Click',(msg) =>{
+    console.log('ユーザーから8を受信しました',msg);
+    io.emit('button8Click',msg = '8');
+  });
+
+  //9
+  socket.on('button9Click',(msg) =>{
+    console.log('ユーザーから9を受信しました',msg);
+    io.emit('button9Click',msg = '9');
+  });
+
+  //10
+  socket.on('button10Click',(msg) =>{
+    console.log('ユーザーから10を受信しました',msg);
+    io.emit('button10Click',msg = '10');
+  });
+
+
 });
 
 httpServer.listen(3003, function(){
