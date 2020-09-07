@@ -13,7 +13,7 @@
     
     //RED 0
     button0.addEventListener('click',function(){
-        socket.emit('button0Click',1);
+        socket.emit('button0Click',0);
         socket.emit('diameter',1);
     });
 

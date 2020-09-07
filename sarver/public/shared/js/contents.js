@@ -1,3 +1,5 @@
+const easel = document.querySelector("#easel")
+
 const animation = bodymovin.loadAnimation({
     container: document.getElementById('lottie'), 
     renderer: 'svg', // 描画形式
@@ -11,6 +13,16 @@ const animation = bodymovin.loadAnimation({
   let diameter = 0;
   let diameter1 = 0;
   let diameter2 = 0;
+
+  socket.on('button0Click',function(msg){
+    //ボタン0が押されたときの処理
+    //<img>要素を作成
+    const img = new Image();
+    img.src = "/shared/images/animated.png";
+    //最後の子要素として<img>要素を追加
+    easel.appendChild(img);
+    console.log(img);
+  });
 
   //RED 0
   socket.on('diameter',function(msg){

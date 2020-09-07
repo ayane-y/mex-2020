@@ -40,7 +40,7 @@ io.on('connection', (socket) => {
 		// ユーザーからメッセージを受信した時の処理
 		console.log('ユーザーから0を受信しました',msg);
 		// このサーバーに接続しているユーザーに受信したメッセージを配信します
-		io.emit('button0Click', msg = '0');
+		io.emit('button0Click', msg);
   });
 
   socket.on('diameter',(msg) =>{
