@@ -18,7 +18,7 @@ const animation = bodymovin.loadAnimation({
     //ボタン0が押されたときの処理
     //<img>要素を作成
     const img = new Image();
-    img.src = "/shared/images/animated-3.png";
+    img.src = "/shared/images/animated-" + msg + ".png";
     img.className = 'easel-img';
     img.style.top = Math.random() * 100 +'%';
     img.style.left = Math.random() * 100 +'%';
@@ -28,6 +28,18 @@ const animation = bodymovin.loadAnimation({
   };
 
   socket.on('button0Click',function(msg){
+    addImage(msg)
+  });
+
+  socket.on('button1Click',function(msg){
+    addImage(msg)
+  });
+
+  socket.on('button2Click',function(msg){
+    addImage(msg)
+  });
+
+  socket.on('button3Click',function(msg){
     addImage(msg)
   });
 

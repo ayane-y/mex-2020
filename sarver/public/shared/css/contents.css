@@ -12,4 +12,5 @@ html,body{
  .easel-img{
      width: 20%;
      position: absolute;
+     filter: hue-rotate(180deg);
  }
