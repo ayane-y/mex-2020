@@ -35,7 +35,7 @@
 
     //YELLOW 2
     button2.addEventListener('click',function(){
-        socket.emit('button2Click',1);
+        socket.emit('button2Click',2);
         socket.emit('diameter2',1);
     });
 
@@ -46,7 +46,7 @@
 
     // 3
     button3.addEventListener('click',function(){
-        socket.emit('button3Click',1);
+        socket.emit('button3Click',3);
     });
 
     socket.on('button3Click',function(msg){
@@ -56,7 +56,7 @@
 
     // 4
     button4.addEventListener('click',function(){
-        socket.emit('button4Click',1);
+        socket.emit('button4Click',4);
     });
 
     socket.on('button4Click',function(msg){
@@ -66,7 +66,7 @@
 
     // 5
     button5.addEventListener('click',function(){
-        socket.emit('button5Click',1);
+        socket.emit('button5Click',5);
     });
 
     socket.on('button5Click',function(msg){
@@ -76,7 +76,7 @@
 
     // 6
     button6.addEventListener('click',function(){
-        socket.emit('button6Click',1);
+        socket.emit('button6Click',6);
     });
 
     socket.on('button6Click',function(msg){
@@ -86,7 +86,7 @@
 
     // 7
     button7.addEventListener('click',function(){
-        socket.emit('button7Click',1);
+        socket.emit('button7Click',7);
     });
 
     socket.on('button7Click',function(msg){
@@ -96,7 +96,7 @@
 
     // 8
     button8.addEventListener('click',function(){
-        socket.emit('button8Click',1);
+        socket.emit('button8Click',8);
     });
 
     socket.on('button8Click',function(msg){
@@ -106,7 +106,7 @@
 
     // 9
     button9.addEventListener('click',function(){
-        socket.emit('button9Click',1);
+        socket.emit('button9Click',9);
     });
 
     socket.on('button9Click',function(msg){
@@ -116,7 +116,7 @@
 
     // 10
     button10.addEventListener('click',function(){
-        socket.emit('button10Click',1);
+        socket.emit('button10Click',10);
     });
 
     socket.on('button10Click',function(msg){
