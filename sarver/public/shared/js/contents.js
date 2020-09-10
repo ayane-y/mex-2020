@@ -1,3 +1,5 @@
+const easel = document.querySelector("#easel")
+
 const animation = bodymovin.loadAnimation({
     container: document.getElementById('lottie'), 
     renderer: 'svg', // 描画形式
@@ -11,6 +13,35 @@ const animation = bodymovin.loadAnimation({
   let diameter = 0;
   let diameter1 = 0;
   let diameter2 = 0;
+
+  const addImage = (msg) => {
+    //ボタン0が押されたときの処理
+    //<img>要素を作成
+    const img = new Image();
+    img.src = "/shared/images/animated-" + msg + ".png";
+    img.className = 'easel-img';
+    img.style.top = Math.random() * 100 +'%';
+    img.style.left = Math.random() * 100 +'%';
+
+    //最後の子要素として<img>要素を追加
+    easel.appendChild(img);
+  };
+
+  socket.on('button0Click',function(msg){
+    addImage(msg)
+  });
+
+  socket.on('button1Click',function(msg){
+    addImage(msg)
+  });
+
+  socket.on('button2Click',function(msg){
+    addImage(msg)
+  });
+
+  socket.on('button3Click',function(msg){
+    addImage(msg)
+  });
 
   //RED 0
   socket.on('diameter',function(msg){
