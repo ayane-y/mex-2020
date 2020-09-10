@@ -14,14 +14,21 @@ const animation = bodymovin.loadAnimation({
   let diameter1 = 0;
   let diameter2 = 0;
 
-  socket.on('button0Click',function(msg){
+  const addImage = (msg) => {
     //ボタン0が押されたときの処理
     //<img>要素を作成
     const img = new Image();
-    img.src = "/shared/images/animated.png";
+    img.src = "/shared/images/animated-3.png";
+    img.className = 'easel-img';
+    img.style.top = Math.random() * 100 +'%';
+    img.style.left = Math.random() * 100 +'%';
+
     //最後の子要素として<img>要素を追加
     easel.appendChild(img);
-    console.log(img);
+  };
+
+  socket.on('button0Click',function(msg){
+    addImage(msg)
   });
 
   //RED 0
