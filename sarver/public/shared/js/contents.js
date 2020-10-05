@@ -1,5 +1,11 @@
 const easel = document.querySelector("#easel")
 
+const pathList = document.querySelectorAll('.path');
+
+pathList,item(0).classList.add('path-show');
+
+console.log(pathList);
+
 const animation = bodymovin.loadAnimation({
     container: document.getElementById('lottie'), 
     renderer: 'svg', // 描画形式
