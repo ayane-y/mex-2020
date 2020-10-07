@@ -7,13 +7,13 @@ svg {
 }
 
 circle,path {
-    transform: scale(0.5);
+    transform: scale(0.1);
     transform-origin: center;
     transition: transform 0.4s;
 }
 
 .path-show{
-    transform: scale(0.1);
+    transform: scale(1);
 }
 
 .easel {

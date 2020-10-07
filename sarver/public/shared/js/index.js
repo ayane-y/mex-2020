@@ -10,6 +10,25 @@
     const button8 = document.querySelector('#send-button-8');
     const button9 = document.querySelector('#send-button-9');
     const button10 = document.querySelector('#send-button-10');
+    const button11 = document.querySelector('#send-button-11');
+    const button12 = document.querySelector('#send-button-12');
+    const button13 = document.querySelector('#send-button-13');
+    const button14 = document.querySelector('#send-button-14');
+    const button15 = document.querySelector('#send-button-15');
+    const button16 = document.querySelector('#send-button-16');
+    const button17 = document.querySelector('#send-button-17');
+    const button18 = document.querySelector('#send-button-18');
+    const button19 = document.querySelector('#send-button-19');
+    const button20 = document.querySelector('#send-button-20');
+    const button21 = document.querySelector('#send-button-21');
+    const button22 = document.querySelector('#send-button-22');
+    const button23 = document.querySelector('#send-button-23');
+    const button24 = document.querySelector('#send-button-24');
+    const button25 = document.querySelector('#send-button-25');
+    const button26 = document.querySelector('#send-button-26');
+    const button27 = document.querySelector('#send-button-27');
+    const button28 = document.querySelector('#send-button-28');
+
     
     //RED 0
     button0.addEventListener('click',function(){
@@ -120,6 +139,186 @@
     });
 
     socket.on('button10Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 11
+    button11.addEventListener('click',function(){
+        socket.emit('button11Click',11);
+    });
+
+    socket.on('button11Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 12
+    button12.addEventListener('click',function(){
+        socket.emit('button12Click',12);
+    });
+
+    socket.on('button12Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 13
+    button13.addEventListener('click',function(){
+        socket.emit('button13Click',13);
+    });
+
+    socket.on('button13Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 14
+    button14.addEventListener('click',function(){
+        socket.emit('button14Click',14);
+    });
+
+    socket.on('button14Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 15
+    button15.addEventListener('click',function(){
+        socket.emit('button15Click',15);
+    });
+
+    socket.on('button15Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 16
+    button16.addEventListener('click',function(){
+        socket.emit('button16Click',16);
+    });
+
+    socket.on('button16Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 17
+    button17.addEventListener('click',function(){
+        socket.emit('button17Click',17);
+    });
+
+    socket.on('button17Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 18
+    button18.addEventListener('click',function(){
+        socket.emit('button18Click',18);
+    });
+
+    socket.on('button18Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 19
+    button19.addEventListener('click',function(){
+        socket.emit('button19Click',19);
+    });
+
+    socket.on('button19Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 20
+    button20.addEventListener('click',function(){
+        socket.emit('button20Click',20);
+    });
+
+    socket.on('button20Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 21
+    button21.addEventListener('click',function(){
+        socket.emit('button21Click',21);
+    });
+
+    socket.on('button21Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 22
+    button22.addEventListener('click',function(){
+        socket.emit('button22Click',22);
+    });
+
+    socket.on('button22Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 23
+    button23.addEventListener('click',function(){
+        socket.emit('button23Click',23);
+    });
+
+    socket.on('button23Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 24
+    button24.addEventListener('click',function(){
+        socket.emit('button24Click',24);
+    });
+
+    socket.on('button24Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 25
+    button25.addEventListener('click',function(){
+        socket.emit('button25Click',25);
+    });
+
+    socket.on('button25Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 26
+    button26.addEventListener('click',function(){
+        socket.emit('button26Click',26);
+    });
+
+    socket.on('button26Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 27
+    button27.addEventListener('click',function(){
+        socket.emit('button27Click',27);
+    });
+
+    socket.on('button27Click',function(msg){
+        console.log('サーバーからデータを受信しました',msg);
+        document.body.append(msg);
+    });
+
+    // 28
+    button28.addEventListener('click',function(){
+        socket.emit('button28Click',28);
+    });
+
+    socket.on('button28Click',function(msg){
         console.log('サーバーからデータを受信しました',msg);
         document.body.append(msg);
     });
