@@ -35,6 +35,7 @@ const animation = bodymovin.loadAnimation({
 
   socket.on('button0Click',function(msg){
     pathList.item(0).classList.add('path-show');
+    pathList.item(0).classList.add('path-show');
   });
 
   socket.on('button1Click',function(msg){
