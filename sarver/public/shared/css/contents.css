@@ -2,6 +2,20 @@ html,body{
     height: 100%;
 }
 
+svg {
+    width: 100%;
+}
+
+circle,path {
+    transform: scale(0.1);
+    transform-origin: center;
+    transition: transform 0.4s;
+}
+
+.path-show{
+    transform: scale(1);
+}
+
 .easel {
     box-sizing: border-box;
     border: solid 10px red;

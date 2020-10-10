@@ -87,7 +87,7 @@ io.on('connection', (socket) => {
     io.emit('diameter2',diameter2);
   };
   
-  //setInterval( reset, 1000 * 20 );
+  setInterval( reset, 1000 * 20 );
 
   //3
   socket.on('button3Click',(msg) =>{
@@ -137,6 +137,113 @@ io.on('connection', (socket) => {
     io.emit('button10Click',msg);
   });
 
+  //11
+  socket.on('button11Click',(msg) =>{
+    console.log('ユーザーから11を受信しました',msg);
+    io.emit('button11Click',msg);
+  });
+
+  //12
+  socket.on('button12Click',(msg) =>{
+    console.log('ユーザーから12を受信しました',msg);
+    io.emit('button12Click',msg);
+  });
+
+  //13
+  socket.on('button13Click',(msg) =>{
+    console.log('ユーザーから13を受信しました',msg);
+    io.emit('button13Click',msg);
+  });
+
+  //14
+  socket.on('button14Click',(msg) =>{
+    console.log('ユーザーから14を受信しました',msg);
+    io.emit('button14Click',msg);
+  });
+
+  //15
+  socket.on('button15Click',(msg) =>{
+    console.log('ユーザーから15を受信しました',msg);
+    io.emit('button15Click',msg);
+  });
+
+  //16
+  socket.on('button16Click',(msg) =>{
+    console.log('ユーザーから16を受信しました',msg);
+    io.emit('button16Click',msg);
+  });
+
+  //17
+  socket.on('button17Click',(msg) =>{
+    console.log('ユーザーから17を受信しました',msg);
+    io.emit('button17Click',msg);
+  });
+
+  //18
+  socket.on('button18Click',(msg) =>{
+    console.log('ユーザーから18を受信しました',msg);
+    io.emit('button18Click',msg);
+  });
+
+  //19
+  socket.on('button19Click',(msg) =>{
+    console.log('ユーザーから19を受信しました',msg);
+    io.emit('button19Click',msg);
+  });
+
+  //20
+  socket.on('button20Click',(msg) =>{
+    console.log('ユーザーから20を受信しました',msg);
+    io.emit('button20Click',msg);
+  });
+
+  //21
+  socket.on('button21Click',(msg) =>{
+    console.log('ユーザーから21を受信しました',msg);
+    io.emit('button21Click',msg);
+  });
+
+  //22
+  socket.on('button22Click',(msg) =>{
+    console.log('ユーザーから22を受信しました',msg);
+    io.emit('button22Click',msg);
+  });
+
+  //23
+  socket.on('button23Click',(msg) =>{
+    console.log('ユーザーから23を受信しました',msg);
+    io.emit('button23Click',msg);
+  });
+
+  //24
+  socket.on('button24Click',(msg) =>{
+    console.log('ユーザーから24を受信しました',msg);
+    io.emit('button24Click',msg);
+  });
+
+  //25
+  socket.on('button25Click',(msg) =>{
+    console.log('ユーザーから25を受信しました',msg);
+    io.emit('button25Click',msg);
+  });
+
+  //26
+  socket.on('button26Click',(msg) =>{
+    console.log('ユーザーから26を受信しました',msg);
+    io.emit('button26Click',msg);
+  });
+
+  //27
+  socket.on('button27Click',(msg) =>{
+    console.log('ユーザーから27を受信しました',msg);
+    io.emit('button27Click',msg);
+  });
+
+  //28
+  socket.on('button28Click',(msg) =>{
+    console.log('ユーザーから28を受信しました',msg);
+    io.emit('button28Click',msg);
+  });
 
 });
 
