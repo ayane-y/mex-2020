@@ -121,13 +121,3 @@ console.log(pathList);
   socket.on('button28Click',function(msg){
     pathList.item(28).classList.add('path-show');
   });
-
-
-  function setup() { 
-
-  }
-
-
-  function draw() {
-
-  }
