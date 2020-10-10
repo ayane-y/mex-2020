@@ -30,10 +30,9 @@
     const button28 = document.querySelector('#send-button-28');
 
     
-    //RED 0
+    // 0
     button0.addEventListener('click',function(){
         socket.emit('button0Click',0);
-        socket.emit('diameter',1);
     });
 
     socket.on('button0Click',function(msg){
@@ -41,10 +40,9 @@
         document.body.append(msg);
     });
 
-    //BLUE 1
+    // 1
     button1.addEventListener('click',function(){
         socket.emit('button1Click',1);
-        socket.emit('diameter1',1);
     });
 
     socket.on('button1Click',function(msg){
@@ -52,10 +50,9 @@
         document.body.append(msg);
     });
 
-    //YELLOW 2
+    // 2
     button2.addEventListener('click',function(){
         socket.emit('button2Click',2);
-        socket.emit('diameter2',1);
     });
 
     socket.on('button2Click',function(msg){
