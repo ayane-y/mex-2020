@@ -3,6 +3,7 @@ html,body{
 }
 
 svg {
+    height: 100%;
     width: 100%;
 }
 
@@ -22,16 +23,3 @@ circle,path {
     /* transition-delay : 3s;
     opacity: 0; */
 }
-
-.easel {
-    box-sizing: border-box;
-    border: solid 10px red;
-    height: 100%;
-    position: relative;
-    overflow: hidden; /*はみ出した部分をマスクする*/
-}
- .easel-img{
-     width: 20%;
-     position: absolute;
-     filter: hue-rotate(180deg);
- }
