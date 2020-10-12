@@ -16,12 +16,23 @@ gsap.set(pathList,{
 
 for (let i = 0; i < BUTTON_NUM; i++){
   socket.on(`button${i}Click`,(msg) => {
+    //ボタンが連打されたとき
+    //すでにアニメーション中であったら古いアニメーションを破棄する
+    gsap.killTweensOf(pathList.item(i));
+
+    //ボタンが押されたタイミングで見た目をリセットする
+    gsap.set(pathList.item(i),{
+      scale: 0,
+      opacity: 0,
+    });    
+
     gsap.to(
       //動かしたい要素や素材
       pathList.item(i),{
         duration: 0.4, //アニメーションする時間
         scale: 1,
         opacity: 1,
+        ease: "power2.inOut",
         onComplete: () => {
           //消える時のアニメーションを書く
           gsap.to(
@@ -29,6 +40,7 @@ for (let i = 0; i < BUTTON_NUM; i++){
               delay: 0.2,//　何秒後にこのアニメーションを始めるか
               duration: 0.4,
               opacity: 0,
+              ease: "power2.inOut",
             }
           );
         }
