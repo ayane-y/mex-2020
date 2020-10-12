@@ -1,5 +1,7 @@
 const pathList = document.querySelectorAll('.path');
 
+console.log(gsap);
+
 console.log(pathList);
 
 //pathList.item(Math.round(Math.random() * pathList.length)).classList.add('path-show');
