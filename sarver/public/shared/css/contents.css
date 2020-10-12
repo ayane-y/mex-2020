@@ -17,6 +17,6 @@ circle,path {
 }
 
 .path-show{
-    transform: scale(1);
-    opacity: 1;
+    /* transform: scale(1);
+    opacity: 1; */
 }
