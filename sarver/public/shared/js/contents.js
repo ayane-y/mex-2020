@@ -11,7 +11,7 @@ console.log(pathList);
   //アニメーションが始まる前の見た目を設定する
   gsap.set(pathList,{
     scale: 0,//縮尺を０倍にする
-    opcity: 0,//透明にする
+    opacity: 0,//透明にする
     transformOrigin: "50% 50%",//変形の基点を図形の重心にする
   });
 
@@ -22,7 +22,17 @@ console.log(pathList);
       {
         duration: 0.4, //アニメーションする時間
         scale: 1,
-        opcity: 1
+        opacity: 1,
+        onComplete: function(){
+          //消える時のアニメーションを書く
+          gsap.to(
+            pathList.item(0),{
+              delay: 0.2,//　何秒後にこのアニメーションを始めるか
+              duration: 0.4,
+              opacity: 0,
+            }
+          );
+        }
       }
     );
 
