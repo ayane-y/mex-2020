@@ -7,12 +7,13 @@ svg {
     width: 100%;
 }
 
+/* アニメーションが始まる前の状態 */
 circle,path {
-    transform: scale(1.2);
+    /* transform: scale(1.2);
     transform-origin: center;
     transition: transform 0.4s;
     transition-timing-function:ease;
-    opacity: 0;
+    opacity: 0; */
 }
 
 .path-show{

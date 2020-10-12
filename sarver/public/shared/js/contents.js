@@ -8,14 +8,25 @@ console.log(pathList);
 
   const socket = io();
 
-  var reset = function(){
-    console.log('リセットします');
-  };
-
-  setInterval( reset, 1000 * 10 );
+  //アニメーションが始まる前の見た目を設定する
+  gsap.set(pathList,{
+    scale: 0,//縮尺を０倍にする
+    opcity: 0,//透明にする
+    transformOrigin: "50% 50%",//変形の基点を図形の重心にする
+  });
 
   socket.on('button0Click',function(msg){
-    pathList.item(0).classList.add('path-show');
+    gsap.to(
+      //動かしたい要素や素材
+      pathList.item(0),
+      {
+        duration: 0.4, //アニメーションする時間
+        scale: 1,
+        opcity: 1
+      }
+    );
+
+    // pathList.item(0).classList.add('path-show');
   });
 
   socket.on('button1Click',function(msg){
