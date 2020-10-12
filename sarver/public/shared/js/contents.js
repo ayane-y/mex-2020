@@ -6,6 +6,12 @@ console.log(pathList);
 
   const socket = io();
 
+  var reset = function(){
+    console.log('リセットします');
+  };
+
+  setInterval( reset, 1000 * 10 );
+
   socket.on('button0Click',function(msg){
     pathList.item(0).classList.add('path-show');
   });
