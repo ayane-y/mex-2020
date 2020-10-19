@@ -1,34 +1,50 @@
     const socket = io();
-    const button0 = document.querySelector('#send-button-0');
-    const button1 = document.querySelector('#send-button-1');
-    const button2 = document.querySelector('#send-button-2');
-    const button3 = document.querySelector('#send-button-3');
-    const button4 = document.querySelector('#send-button-4');
-    const button5 = document.querySelector('#send-button-5');
-    const button6 = document.querySelector('#send-button-6');
-    const button7 = document.querySelector('#send-button-7');
-    const button8 = document.querySelector('#send-button-8');
-    const button9 = document.querySelector('#send-button-9');
-    const button10 = document.querySelector('#send-button-10');
-    const button11 = document.querySelector('#send-button-11');
-    const button12 = document.querySelector('#send-button-12');
-    const button13 = document.querySelector('#send-button-13');
-    const button14 = document.querySelector('#send-button-14');
-    const button15 = document.querySelector('#send-button-15');
-    const button16 = document.querySelector('#send-button-16');
-    const button17 = document.querySelector('#send-button-17');
-    const button18 = document.querySelector('#send-button-18');
-    const button19 = document.querySelector('#send-button-19');
-    const button20 = document.querySelector('#send-button-20');
-    const button21 = document.querySelector('#send-button-21');
-    const button22 = document.querySelector('#send-button-22');
-    const button23 = document.querySelector('#send-button-23');
-    const button24 = document.querySelector('#send-button-24');
-    const button25 = document.querySelector('#send-button-25');
-    const button26 = document.querySelector('#send-button-26');
-    const button27 = document.querySelector('#send-button-27');
-    const button28 = document.querySelector('#send-button-28');
+    const btnsquareList = document.querySelectorAll('.btnsquare');
+    console.log(btnsquareList);
+    const BUTTON_NUM = 29;//スマホ側のボタンの数に合わせる
 
+    // const button0 = document.querySelector('#send-button-0');
+    // const button1 = document.querySelector('#send-button-1');
+    // const button2 = document.querySelector('#send-button-2');
+    // const button3 = document.querySelector('#send-button-3');
+    // const button4 = document.querySelector('#send-button-4');
+    // const button5 = document.querySelector('#send-button-5');
+    // const button6 = document.querySelector('#send-button-6');
+    // const button7 = document.querySelector('#send-button-7');
+    // const button8 = document.querySelector('#send-button-8');
+    // const button9 = document.querySelector('#send-button-9');
+    // const button10 = document.querySelector('#send-button-10');
+    // const button11 = document.querySelector('#send-button-11');
+    // const button12 = document.querySelector('#send-button-12');
+    // const button13 = document.querySelector('#send-button-13');
+    // const button14 = document.querySelector('#send-button-14');
+    // const button15 = document.querySelector('#send-button-15');
+    // const button16 = document.querySelector('#send-button-16');
+    // const button17 = document.querySelector('#send-button-17');
+    // const button18 = document.querySelector('#send-button-18');
+    // const button19 = document.querySelector('#send-button-19');
+    // const button20 = document.querySelector('#send-button-20');
+    // const button21 = document.querySelector('#send-button-21');
+    // const button22 = document.querySelector('#send-button-22');
+    // const button23 = document.querySelector('#send-button-23');
+    // const button24 = document.querySelector('#send-button-24');
+    // const button25 = document.querySelector('#send-button-25');
+    // const button26 = document.querySelector('#send-button-26');
+    // const button27 = document.querySelector('#send-button-27');
+    // const button28 = document.querySelector('#send-button-28');
+
+    for (let i = 0; i < BUTTON_NUM; i++){
+
+        btnsquareList.addEventListener('click',function(){
+            socket.emit(`button${i}Click`,(i));
+        });
+    
+        socket.on(`button${i}Click`,function(msg){
+            console.log('サーバーからデータを受信しました',msg);
+            document.body.append(msg);
+        });
+    
+    }
     
     // 0
     button0.addEventListener('click',function(){
