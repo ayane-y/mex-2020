@@ -46,5 +46,14 @@ for (let i = 0; i < BUTTON_NUM; i++){
         }
       }
     );
+
+    //サウンド設定
+    const sound = new Howl({
+      // 読み込む音声ファイル
+      src: ['/shared/audio/SE2.mp3']
+    });
+  
+    sound.play();//再生
+
   });
 }
