@@ -2,7 +2,6 @@ const pathList = document.querySelectorAll('.path');
 
 console.log(pathList);
 
-
 //pathList.item(Math.round(Math.random() * pathList.length)).classList.add('path-show');
 
 const socket = io();
@@ -48,16 +47,13 @@ for (let i = 0; i < BUTTON_NUM; i++){
       }
     );
 
+    //サウンド設定
+    const sound = new Howl({
+      // 読み込む音声ファイル
+      src: ['/shared/audio/SE2.mp3']
+    });
+  
+    sound.play();//再生
+
   });
 }
-
-
-socket.on(`button0Click`,(msg) => {
-
-  const sound = new Howl({
-    src: ['SE1.mp3']
-  });
-
-  sound.play();
-
-});
