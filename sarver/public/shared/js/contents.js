@@ -2,6 +2,7 @@ const pathList = document.querySelectorAll('.path');
 
 console.log(pathList);
 
+
 //pathList.item(Math.round(Math.random() * pathList.length)).classList.add('path-show');
 
 const socket = io();
@@ -46,5 +47,17 @@ for (let i = 0; i < BUTTON_NUM; i++){
         }
       }
     );
+
   });
 }
+
+
+socket.on(`button0Click`,(msg) => {
+
+  const sound = new Howl({
+    src: ['SE1.mp3']
+  });
+
+  sound.play();
+
+});
