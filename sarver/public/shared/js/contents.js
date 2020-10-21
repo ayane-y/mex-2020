@@ -5,7 +5,6 @@ console.log(pathList);
 //pathList.item(Math.round(Math.random() * pathList.length)).classList.add('path-show');
 
 const socket = io();
-const BUTTON_NUM = 29;//スマホ側のボタンの数に合わせる
 
 //アニメーションが始まる前の見た目を設定する
 gsap.set(pathList,{
@@ -14,7 +13,7 @@ gsap.set(pathList,{
   transformOrigin: "50% 50%",//変形の基点を図形の重心にする
 });
 
-for (let i = 0; i < BUTTON_NUM; i++){
+for (let i = 0; i < pathList.length; i++){
   socket.on(`button${i}Click`,(msg) => {
     //ボタンが連打されたとき
     //すでにアニメーション中であったら古いアニメーションを破棄する
