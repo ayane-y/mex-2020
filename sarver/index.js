@@ -7,7 +7,7 @@ const app = express();
 const httpServer = http.Server(app);
 // httpServer を元に WebSocket（リアルタイム通信）用のIOを作成
 const io = new SocketServer(httpServer);
-const BUTTON_NUM = 58 //スマホのボタンの数
+const BUTTON_NUM = 111 //スマホのボタンの数
 
 app.use(express.static('public'));
 
