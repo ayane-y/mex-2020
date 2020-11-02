@@ -28,15 +28,15 @@ for (let i = 0; i < pathList.length; i++){
     gsap.to(
       //動かしたい要素や素材
       pathList.item(i),{
-        duration: 0.4, //アニメーションする時間
+        duration: 0.2, //アニメーションする時間
         scale: 1,
-        opacity: 1,
-        ease: "power2.inOut",
+        opacity: 0.8,
+        ease: "power4.inOut",
         onComplete: () => {
           //消える時のアニメーションを書く
           gsap.to(
             pathList.item(i),{
-              delay: 0.2,//　何秒後にこのアニメーションを始めるか
+              delay: 3,//　何秒後にこのアニメーションを始めるか
               duration: 0.4,
               opacity: 0,
               ease: "power2.inOut",
