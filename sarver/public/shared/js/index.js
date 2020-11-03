@@ -10,7 +10,7 @@ for (let i = 0; i < btnsquareList.length; i++){
 
     socket.on(`button${i}Click`,function(msg){
         console.log('サーバーからデータを受信しました',msg);
-        document.body.append(msg);
+        // document.body.append(msg);
     });
 
 }
