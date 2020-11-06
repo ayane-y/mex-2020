@@ -2,6 +2,37 @@
    background: rgb(243, 209, 209);
   }
 
+  .about {
+    background-color: #00000066; /* #RRGGBBAA */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+.about-hide{
+  display: none;
+}
+
+.about-item{
+  background-color: #ffffff; /* #RRGGBBAA */
+  border-radius: 10px;/*角丸*/
+  font-weight: bold; /*太字に*/
+  font-size: 15px;
+  text-align : center;
+  line-height: 120px;
+}
+
+.about-button-close{
+  background-color: transparent;
+}
+
+.about-images{
+  width: 100%;
+}
+
   .btnsquare { 
     border: none;
     outline: none;

@@ -2,12 +2,32 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="shared/css/index.css">
   <title>Three Buttons</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
 </head>
 <body>
+  <div id="js-about" class="about">
+    <button id="js-button-close" class="about-button-close">閉じる</button>
+    <!--svg-->
+    <div class="about-list"></div>
+      <div class="about-item">
+        <p>①スマホでボタンを押すと、パソコンに図形が現れるよ！</p>
+        <img  class="about-images" src="shared/images/animated-3.png">
+      </div>
+      <div class="about-item">
+        <p>②このパソコンはたくさんのスマホと連動できるよ！</p>
+      </div>
+      <div class="about-item">
+        <p>③キミにはどんな形が見えるかな？</p>
+      </div>
+    </div>
+  </div>
+
+
+
   <button type="button" value="0" id="send-button-0" class="btnsquare">0</button>
   <button type="button" value="1" id="send-button-1" class="btnsquare">1</button>
   <button type="button" value="2" id="send-button-2" class="btnsquare">2</button>
