@@ -25,8 +25,9 @@
   line-height: 120px;
 }
 
-.about-button-close{
+.about-button-close {
   background-color: transparent;
+  border: none;
 }
 
 .about-images{
