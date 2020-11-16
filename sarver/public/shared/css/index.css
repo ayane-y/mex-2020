@@ -22,7 +22,8 @@
   font-weight: bold; /*太字に*/
   font-size: 15px;
   text-align : center;
-  line-height: 120px;
+  /* line-height: 120px; */
+  padding: 20px;
 }
 
 .about-button-close {

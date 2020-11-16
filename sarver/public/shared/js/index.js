@@ -15,7 +15,9 @@ console.log(btnsquareList);
 for (let i = 0; i < btnsquareList.length; i++){
 
     btnsquareList.item(i).addEventListener('click',function(){
+        //ここでサーバーにデータを送っている
         socket.emit(`button${i}Click`,(i));
+        // socket.emit(`button${i}Click`,ここ変える{id: ,coler: });
     });
 
     socket.on(`button${i}Click`,function(msg){
