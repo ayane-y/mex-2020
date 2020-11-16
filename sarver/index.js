@@ -45,8 +45,8 @@ io.on('connection', (socket) => {
   socket.on(`colorbtnclick`, (msg) => {
     // ユーザーからメッセージを受信した時の処理
     console.log(`ユーザーからカラーチェンジを受信しました`,msg);
-    // // このサーバーに接続しているユーザーに受信したメッセージを配信します
-    // io.emit(`colorbtnclick`, msg = `赤`);
+    // このサーバーに接続しているユーザーに受信したメッセージを配信します
+    io.emit(`colorbtnclick`, msg = `赤`);
   });  
 });
 

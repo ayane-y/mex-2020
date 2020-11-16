@@ -22,7 +22,6 @@ colorbtn.addEventListener('click',function(){
     socket.emit('colorbtnclick',00);
 })
 
-// socket.on(`colorbtnclick`,function(msg){
-//     console.log('サーバーからデータを受信しました',msg);
-//     document.body.append(msg);
-// });
+socket.on(`colorbtnclick`,function(msg){
+    console.log('サーバーから色を受信しました',msg);
+});
