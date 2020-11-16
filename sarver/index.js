@@ -32,7 +32,6 @@ io.on('connection', (socket) => {
   console.log('ユーザーが接続しました');
 
   for (let i = 0; i <  BUTTON_NUM; i++){
-      //0
     // ユーザーからメッセージを受信した時の処理を.on で登録します
     socket.on(`button${i}Click`, (msg) => {
       // ユーザーからメッセージを受信した時の処理
@@ -42,6 +41,15 @@ io.on('connection', (socket) => {
     });
   }
 });
+
+//カラーボタン用
+socket.on(`colorbtnclick`, (msg) => {
+  // ユーザーからメッセージを受信した時の処理
+  console.log(`ユーザーから赤色を受信しました`,msg);
+  // このサーバーに接続しているユーザーに受信したメッセージを配信します
+  io.emit(`colorbtnclick`, msg = `赤`);
+});  
+
 
 httpServer.listen(3003, function(){
   console.log('サーバーが起動しました。URLは http://localhost:3003 です');
