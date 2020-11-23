@@ -2,12 +2,22 @@
    background: rgb(243, 209, 209);
   }
 
+  div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    display: block;
+    width: calc(1 / 5 * 100%);
+  }
+
   .btnsquare { 
     border: none;
     outline: none;
     text-decoration: none;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 100px;
     background: rgb(243, 209, 209);/*ボタン色*/
     color: #799dec;
     text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;
