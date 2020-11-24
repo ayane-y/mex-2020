@@ -12,6 +12,11 @@ aboutButtonClose.addEventListener('click',function(){
 const btnsquareList = document.querySelectorAll('.btnsquare');
 console.log(btnsquareList);
 
+//Swiper の初期化をする
+const swiper = new Swiper('.swiper-container', {
+    centeredSlides: true,
+});
+
 for (let i = 0; i < btnsquareList.length; i++){
 
     btnsquareList.item(i).addEventListener('click',function(){

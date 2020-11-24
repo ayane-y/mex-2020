@@ -17,13 +17,17 @@
 }
 
 .about-item{
-  background-color: #ffffff; /* #RRGGBBAA */
-  border-radius: 10px;/*角丸*/
   font-weight: bold; /*太字に*/
   font-size: 15px;
   text-align : center;
   /* line-height: 120px; */
+}
+
+.about-item-inner{
+  background-color: #ffffff; /* #RRGGBBAA */
+  border-radius: 10px;/*角丸*/
   padding: 20px;
+  margin: 0 20px;
 }
 
 .about-button-close {

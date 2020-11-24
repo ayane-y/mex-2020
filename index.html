@@ -4,27 +4,39 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="shared/css/index.css">
   <title>Three Buttons</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
   <div id="js-about" class="about">
     <button id="js-button-close" class="about-button-close">閉じる</button>
-    <div class="about-list">
-      <div class="about-item">
-        <p>①スマホでボタンを押すと、パソコンに図形が現れるよ！</p>
-        <img  class="about-images" src="shared/images/images1.jpg">
+    <div class="swiper-container">
+      <div class="about-list swiper-wrapper">
+        <div class="about-item swiper-slide">
+          <div class="about-item-inner">
+            <p>①スマホでボタンを押すと、パソコンに図形が現れるよ！</p>
+            <img  class="about-images" src="shared/images/images1.jpg">
+          </div>
+        </div>
+        <div class="about-item swiper-slide">
+          <div class="about-item-inner">
+            <p>②このパソコンはたくさんのスマホと連動できるよ！</p>
+            <img  class="about-images" src="shared/images/images2.jpg">
+          </div>
+        </div>
+        <div class="about-item swiper-slide">
+          <div class="about-item-inner">
+            <p>③キミにはどんな形が見えるかな？</p>
+            <img  class="about-images" src="shared/images/images3.jpg">
+          </div>
+        </div>
       </div>
-      <div class="about-item">
-        <p>②このパソコンはたくさんのスマホと連動できるよ！</p>
-        <a href="http://localhost:3003/contents">PCの画面を開きたい方はこちら！</a>
-        <img  class="about-images" src="shared/images/images2.jpg">
-      </div>
-      <div class="about-item">
-        <p>③キミにはどんな形が見えるかな？</p>
-        <img  class="about-images" src="shared/images/images3.jpg">
-      </div>
+    </div>
+    <div class="about-item-inner">
+      <a href="contents">パソコンの画面を開きたい方はこちら！</a>
     </div>
   </div>
 
