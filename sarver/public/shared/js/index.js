@@ -15,6 +15,13 @@ console.log(btnsquareList);
 //Swiper の初期化をする
 const swiper = new Swiper('.swiper-container', {
     centeredSlides: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
 });
 
 for (let i = 0; i < btnsquareList.length; i++){
