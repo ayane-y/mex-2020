@@ -2,12 +2,49 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="shared/css/index.css">
   <title>Three Buttons</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
+  <div id="js-about" class="about">
+    <div class="swiper-container">
+      <button id="js-button-close" class="about-button-close">
+        <img src="shared/SVG/closebutton.svg">
+      </button>  
+      <div class="about-list swiper-wrapper">
+        <div class="about-item swiper-slide">
+          <div class="about-item-inner">
+            <p>①スマホでボタンを押すと、パソコンに図形が現れるよ！</p>
+            <img  class="about-images" src="shared/images/images1.jpg">
+          </div>
+        </div>
+        <div class="about-item swiper-slide">
+          <div class="about-item-inner">
+            <p>②このパソコンはたくさんのスマホと連動できるよ！</p>
+            <img  class="about-images" src="shared/images/images2.jpg">
+          </div>
+        </div>
+        <div class="about-item swiper-slide">
+          <div class="about-item-inner">
+            <p>③キミにはどんな形が見えるかな？</p>
+            <img  class="about-images" src="shared/images/images3.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      <div class="about-item-inner">
+        <a href="contents">パソコンの画面を開きたい方はこちら！</a>
+      </div>
+    </div>
+  </div>
+
   <button type="button" value="0" id="send-button-0" class="btnsquare">0</button>
   <button type="button" value="1" id="send-button-1" class="btnsquare">1</button>
   <button type="button" value="2" id="send-button-2" class="btnsquare">2</button>
