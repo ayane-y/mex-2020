@@ -6,6 +6,11 @@ console.log(pathList);
 
 const socket = io();
 
+const audioFile = [
+  'C.mp3',
+  'C2.mp3',
+]
+
 //アニメーションが始まる前の見た目を設定する
 gsap.set(pathList,{
   scale: 0,//縮尺を０倍にする
@@ -46,10 +51,12 @@ for (let i = 0; i < pathList.length; i++){
       }
     );
 
+    const file = audioFile [ Math.floor( Math.random() * audioFile.length)]
+
     //サウンド設定
     const sound = new Howl({
       // 読み込む音声ファイル
-      src: ['/shared/audio/SE2.mp3']
+      src: [`/shared/audio/${file}`]
     });
   
     sound.play();//再生
