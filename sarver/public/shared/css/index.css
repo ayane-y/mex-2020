@@ -1,46 +1,73 @@
-  body{
-   background: rgb(243, 209, 209);
-  }
+body{
+  background: rgb(243, 209, 209);
+}
 
-  div {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  button {
-    display: block;
-    width: calc(1 / 5 * 100%);
-  }
+.about {
+  background-color: #00000066; /* #RRGGBBAA */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
 
-  .btnsquare { 
-    border: none;
-    outline: none;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 100px;
-    background: rgb(243, 209, 209);/*ボタン色*/
-    color: #799dec;
-    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;
-  }
-  .btnsquare:active {
-    transform: translateY(4px);/*下に動く*/
-    top: 4px;
-    text-shadow: none;
-  }
+.about-hide{
+  display: none;
+}
 
-  .colorbtn { 
-    border: none;
-    outline: none;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 50px;
-    background: rgb(243, 209, 209);/*ボタン色*/
-    color: #799dec;
-    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;
-  }
+.swiper-container{
+  position: relative;
+}
 
-  .colorbtn:active {
-    transform: translateY(4px);/*下に動く*/
-    top: 4px;
-    text-shadow: none;
-  }
+.about-list{
+  padding: 10px 0px 0px;
+  position: relative;
+  z-index: 0;
+}
+
+.about-item{
+  font-weight: bold; /*太字に*/
+  font-size: 15px;
+  text-align : center;
+  /* line-height: 120px; */
+}
+
+.about-item-inner{
+  background-color: #ffffff; /* #RRGGBBAA */
+  border-radius: 10px;/*角丸*/
+  padding: 20px;
+  margin: 0 20px;
+}
+
+.about-button-close {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  left: 100%;
+  z-index: 1;
+  transform: translateX(-100%);
+  margin: 20px 0 0 -20px;
+}
+
+.about-images{
+  width: 100%;
+}
+
+.btnsquare { 
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 50px;
+  background: rgb(243, 209, 209);/*ボタン色*/
+  color: #799dec;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;
+}
+
+.btnsquare:active {
+  transform: translateY(4px);/*下に動く*/
+  top: 4px;
+  text-shadow: none;
+}
