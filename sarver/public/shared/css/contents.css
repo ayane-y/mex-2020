@@ -7,6 +7,13 @@ svg {
     width: 100%;
 }
 
+.btnURL{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 50;
+}
+
 /* アニメーションが始まる前の状態 */
 circle,path {
     /* transform: scale(1.2);
