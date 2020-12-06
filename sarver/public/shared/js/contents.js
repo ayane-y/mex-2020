@@ -9,6 +9,8 @@ const socket = io();
 const audioFile = [
   'C.mp3',
   'C2.mp3',
+  'E.mp3',
+  'G.mp3',
 ]
 
 //アニメーションが始まる前の見た目を設定する
