@@ -13,11 +13,18 @@ const audioFile = [
   'G.mp3',
 ]
 
+//初期値はスマホで最初に選択されている色にする
+let fillcolor = '#000000';
+
 //アニメーションが始まる前の見た目を設定する
 gsap.set(pathList,{
   scale: 0,//縮尺を０倍にする
   opacity: 0,//透明にする
   transformOrigin: "50% 50%",//変形の基点を図形の重心にする
+});
+
+socket.on('colorbtnclick',(color) =>{
+  fillcolor = color;
 });
 
 for (let i = 0; i < pathList.length; i++){
@@ -36,6 +43,7 @@ for (let i = 0; i < pathList.length; i++){
       //動かしたい要素や素材
       pathList.item(i),{
         duration: 0.2, //アニメーションする時間
+        fill: fillcolor,
         scale: 1,
         opacity: 0.8,
         ease: "power4.inOut",

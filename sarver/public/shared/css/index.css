@@ -103,3 +103,9 @@ button {
   top: 4px;
   text-shadow: none;
 }
+
+@media(min-width: 768px){
+  .btnsquare { 
+    font-size: 60px;
+  }
+}

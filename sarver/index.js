@@ -42,11 +42,11 @@ io.on('connection', (socket) => {
   }
 
   //カラーボタン用
-  socket.on(`colorbtnclick`, (msg) => {
+  socket.on(`colorbtnclick`, (color) => {
     // ユーザーからメッセージを受信した時の処理
-    console.log(`ユーザーからカラーチェンジを受信しました`,msg);
+    console.log(`ユーザーからカラーチェンジを受信しました`, color);
     // このサーバーに接続しているユーザーに受信したメッセージを配信します
-    io.emit(`colorbtnclick`, msg = `赤`);
+    io.emit(`colorbtnclick`, color);
   });  
 });
 

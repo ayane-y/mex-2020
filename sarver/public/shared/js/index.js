@@ -4,6 +4,11 @@ const colorbtn = document.querySelector('.colorbtn');
 const about = document.querySelector('#js-about');
 const aboutButtonClose = document.querySelector('#js-button-close');
 
+const COLORS = [
+    '#000000','#111111','#222222','#333333','#444444'
+];
+let colorCounter = 0;
+
 aboutButtonClose.addEventListener('click',function(){
     console.log('close');
     //非表示の処理
@@ -43,7 +48,9 @@ for (let i = 0; i < btnsquareList.length; i++){
 //カラーボタン用
 colorbtn.addEventListener('click',function(){
     console.log('カラーチェンジボタンを押しました');
-    socket.emit('colorbtnclick',00);
+    const color = COLORS[colorCounter % COLORS.length];
+    socket.emit("colorbtnclick",color);
+    colorCounter += 1;
 })
 
 socket.on(`colorbtnclick`,function(msg){
