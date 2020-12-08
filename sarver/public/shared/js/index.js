@@ -5,7 +5,7 @@ const about = document.querySelector('#js-about');
 const aboutButtonClose = document.querySelector('#js-button-close');
 
 const COLORS = [
-    '#000000','#111111','#222222','#333333','#444444'
+    '#000000','#799dec','#ec79c0','#83ec79','#ec7979'
 ];
 let colorCounter = 0;
 

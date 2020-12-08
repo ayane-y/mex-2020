@@ -25,6 +25,7 @@ gsap.set(pathList,{
 
 socket.on('colorbtnclick',(color) =>{
   fillcolor = color;
+  console.log(fillcolor);
 });
 
 for (let i = 0; i < pathList.length; i++){

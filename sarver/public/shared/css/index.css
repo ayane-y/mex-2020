@@ -55,6 +55,10 @@ body{
   width: 100%;
 }
 
+.PCURL{
+  width: 60%;
+}
+
 .colorbtn{
   border: none;
   outline: none;
@@ -105,7 +109,24 @@ button {
 }
 
 @media(min-width: 768px){
+  .about-item-inner{
+    font-size: 23px;
+  }
+
   .btnsquare { 
     font-size: 60px;
+  }
+
+  button {
+    list-style: none;
+    width: 80px; /* flexアイテムの横幅を指定する */
+    height: 80px; /* flexアイテムの高さを指定する */
+    margin: 20px;/* flexアイテムの余白を指定する */
+  }
+
+  .colorbtn{
+    font-size: 150px;
+    bottom: 7%;
+    right: 2%;
   }
 }
