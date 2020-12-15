@@ -3,7 +3,6 @@ const colorbtn = document.querySelector('.colorbtn');
 
 const about = document.querySelector('#js-about');
 const aboutButtonClose = document.querySelector('#js-button-close');
-const buttonChangecolor = document.querySelector('#send-button-0');
 
 const COLORS = [
     '#d16d29','#dbc426','#8bb93d','#3e9f49','#44a798','#325aa5','#5c4393','#ab5094','#c62f6f','#c93e2a'
@@ -14,10 +13,6 @@ aboutButtonClose.addEventListener('click',function(){
     console.log('close');
     //非表示の処理
     about.classList.add('about-hide');
-});
-
-buttonChangecolor.addEventListener('click',function(){
-    console.log('Changecolor');
 });
 
 const btnsquareList = document.querySelectorAll('.btnsquare');
