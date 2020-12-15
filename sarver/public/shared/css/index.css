@@ -5,6 +5,7 @@ body{
 }
 
 .about {
+  display: none;
   background-color: #00000066; /* #RRGGBBAA */
   width: 100%;
   height: 100%;
