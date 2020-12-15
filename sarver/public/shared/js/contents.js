@@ -14,7 +14,7 @@ const audioFile = [
 ]
 
 //初期値はスマホで最初に選択されている色にする
-let fillcolor = '#000000';
+let fillcolor = '#c93e2a';
 
 //アニメーションが始まる前の見た目を設定する
 gsap.set(pathList,{

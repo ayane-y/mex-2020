@@ -13,6 +13,10 @@ svg {
     z-index: 50;
 }
 
+.Title-images{
+    width: 100px;
+}
+
 .btnURL{
     position: fixed;
     bottom: 0;
