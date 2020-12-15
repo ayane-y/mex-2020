@@ -1,6 +1,7 @@
 body{
   background: rgb(255, 255, 255);
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Russo One', sans-serif;
 }
 
 .about {
@@ -61,6 +62,7 @@ body{
 }
 
 .colorbtn{
+  line-height: 0;
   border: none;
   outline: none;
   text-decoration: none;
@@ -78,6 +80,10 @@ body{
 .colorbtn:active {
   transform: translateY(4px);/*下に動く*/
   text-shadow: none;
+}
+
+.colorbtn:focus{
+  outline: none;
 }
 
 .button-color-0{
@@ -135,14 +141,17 @@ body{
   flex-wrap: wrap;
 }
 
-button {
+/* button {
   list-style: none;
-  width: 40px; /* flexアイテムの横幅を指定する */
-  height: 40px; /* flexアイテムの高さを指定する */
-  margin: 10px;/* flexアイテムの余白を指定する */
-}
+  width: 40px; flexアイテムの横幅を指定する
+  height: 40px; flexアイテムの高さを指定する
+  margin: 10px; flexアイテムの余白を指定する
+} */
 
 .btnsquare { 
+  font-family: 'Russo One', sans-serif;
+  width: calc(1 / 4 *100%);
+  padding: 20px 0;
   border: none;
   outline: none;
   text-decoration: none;
@@ -159,6 +168,10 @@ button {
   text-shadow: none;
 }
 
+.btnsquare:focus{
+  outline: none;
+}
+
 @media(min-width: 768px){
   .about-item-inner{
     font-size: 23px;
@@ -166,14 +179,15 @@ button {
 
   .btnsquare { 
     font-size: 60px;
+    width: calc(1 / 6 *100%);
   }
 
-  button {
+  /* button {
     list-style: none;
-    width: 80px; /* flexアイテムの横幅を指定する */
-    height: 80px; /* flexアイテムの高さを指定する */
-    margin: 20px;/* flexアイテムの余白を指定する */
-  }
+    width: 80px; flexアイテムの横幅を指定する
+    height: 80px; flexアイテムの高さを指定する
+    margin: 20px;flexアイテムの余白を指定する
+  } */
 
   .colorbtn{
     font-size: 150px;
