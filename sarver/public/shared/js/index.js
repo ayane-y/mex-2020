@@ -55,9 +55,9 @@ colorbtn.addEventListener('click',function(){
     console.log('カラーチェンジボタンを押しました');
     const color = COLORS[colorCounter % COLORS.length];
     socket.emit("colorbtnclick",color);
-    // ボタン要素.classList.remove(`button-color-${colorCounter % COLORS.length}`);
+    colorbtn.classList.remove(`button-color-${colorCounter % COLORS.length}`);
     colorCounter += 1;
-    // ボタン要素.classList.add(`button-color-${colorCounter % COLORS.length}`);
+    colorbtn.classList.add(`button-color-${colorCounter % COLORS.length}`);
 })
 
 socket.on(`colorbtnclick`,function(msg){
