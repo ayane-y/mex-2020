@@ -5,8 +5,9 @@ const about = document.querySelector('#js-about');
 const aboutButtonClose = document.querySelector('#js-button-close');
 
 const COLORS = [
-    '#d16d29','#dbc426','#8bb93d','#3e9f49','#44a798','#325aa5','#5c4393','#ab5094','#c62f6f','#c93e2a'
+    '#c93e2a','#d16d29','#dbc426','#8bb93d','#3e9f49','#44a798','#325aa5','#5c4393','#ab5094','#c62f6f'
 ];
+let color = COLORS[0];
 let colorCounter = 0;
 
 aboutButtonClose.addEventListener('click',function(){
@@ -34,7 +35,10 @@ for (let i = 0; i < btnsquareList.length; i++){
 
     btnsquareList.item(i).addEventListener('click',function(){
         //ここでサーバーにデータを送っている
-        socket.emit(`button${i}Click`,(i));
+        socket.emit(`button${i}Click`,{
+            id: i,
+            color: color
+        });
         // socket.emit(`button${i}Click`,ここ変える{id: ,coler: });
     });
 
@@ -48,7 +52,7 @@ for (let i = 0; i < btnsquareList.length; i++){
 //カラーボタン用
 colorbtn.addEventListener('click',function(){
     console.log('カラーチェンジボタンを押しました');
-    const color = COLORS[colorCounter % COLORS.length];
+    color = COLORS[colorCounter % COLORS.length];
     socket.emit("colorbtnclick",color);
     colorbtn.classList.remove(`button-color-${colorCounter % COLORS.length}`);
     colorCounter += 1;

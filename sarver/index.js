@@ -43,6 +43,7 @@ io.on('connection', (socket) => {
 
   //カラーボタン用
   socket.on(`colorbtnclick`, (color) => {
+    console.log(color);
     // ユーザーからメッセージを受信した時の処理
     console.log(`ユーザーからカラーチェンジを受信しました`, color);
     // このサーバーに接続しているユーザーに受信したメッセージを配信します

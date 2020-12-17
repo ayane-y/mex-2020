@@ -44,7 +44,7 @@ for (let i = 0; i < pathList.length; i++){
       //動かしたい要素や素材
       pathList.item(i),{
         duration: 0.2, //アニメーションする時間
-        fill: fillcolor,
+        fill: msg.color,
         scale: 1,
         opacity: 0.8,
         ease: "power4.inOut",
