@@ -40,17 +40,7 @@ io.on('connection', (socket) => {
       io.emit(`button${i}Click`, msg);
     });
   }
-
-  //カラーボタン用
-  socket.on(`colorbtnclick`, (color) => {
-    console.log(color);
-    // ユーザーからメッセージを受信した時の処理
-    console.log(`ユーザーからカラーチェンジを受信しました`, color);
-    // このサーバーに接続しているユーザーに受信したメッセージを配信します
-    io.emit(`colorbtnclick`, color);
-  });  
 });
-
 
 httpServer.listen(3003, function(){
   console.log('サーバーが起動しました。URLは http://localhost:3003 です');

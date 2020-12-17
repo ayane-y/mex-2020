@@ -39,7 +39,6 @@ for (let i = 0; i < btnsquareList.length; i++){
             id: i,
             color: color
         });
-        // socket.emit(`button${i}Click`,ここ変える{id: ,coler: });
     });
 
     socket.on(`button${i}Click`,function(msg){
@@ -52,10 +51,9 @@ for (let i = 0; i < btnsquareList.length; i++){
 //カラーボタン用
 colorbtn.addEventListener('click',function(){
     console.log('カラーチェンジボタンを押しました');
-    color = COLORS[colorCounter % COLORS.length];
-    socket.emit("colorbtnclick",color);
     colorbtn.classList.remove(`button-color-${colorCounter % COLORS.length}`);
     colorCounter += 1;
+    color = COLORS[colorCounter % COLORS.length];
     colorbtn.classList.add(`button-color-${colorCounter % COLORS.length}`);
 })
 
