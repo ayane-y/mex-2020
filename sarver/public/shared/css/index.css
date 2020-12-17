@@ -1,5 +1,7 @@
 body{
-  background: rgb(243, 209, 209);
+  background: rgb(255, 255, 255);
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Russo One', sans-serif;
 }
 
 .about {
@@ -27,6 +29,7 @@ body{
 }
 
 .about-item{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: bold; /*太字に*/
   font-size: 15px;
   text-align : center;
@@ -55,19 +58,154 @@ body{
   width: 100%;
 }
 
+.PCURL{
+  width: 60%;
+}
+
+.colorbtn{
+  /* 色替えボタンの丸 */
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+
+  line-height: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 22px;
+  color:  #ffffff;
+  background-color: rgba(201, 62, 42, 0.9);/*背景透明*/
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #a82e1b, 0px 2px 0px #922312, 0px 3px 0px #972817;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  z-index: 50;
+
+  /* ハイライト非表示 */
+  -webkit-touch-callout:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.colorbtn:active {
+  transform: translateY(4px);/*下に動く*/
+  text-shadow: none;
+}
+
+.colorbtn:focus{
+  outline: none;
+}
+
+.button-color-0{
+  background-color: rgba(201, 62, 42, 0.9);/*背景透明*/
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #a82e1b, 0px 2px 0px #922312, 0px 3px 0px #972817;
+}
+
+.button-color-1{
+  background-color: rgba(209, 109, 41, 0.9);/*ボタン色*/
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #c26628, 0px 2px 0px #bd5713, 0px 3px 0px  #c7611d;
+}
+
+.button-color-2{
+  background-color: rgba(219, 196, 38, 0.9);/*ボタン色*/
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #cab215, 0px 2px 0px #bba30a, 0px 3px 0px  #c7af11;
+}
+
+.button-color-3{
+  background-color: rgba(139, 185, 61, 0.9);/*ボタン色*/
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #79a826, 0px 2px 0px #6b9c17, 0px 3px 0px #76a524;
+}
+
+.button-color-4{
+  background-color: rgba(62, 159, 73, 0.9);/*ボタン色*/
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #228b2e, 0px 2px 0px #137e20, 0px 3px 0px #1c8628;
+}
+
+.button-color-5{
+  background-color: rgba(68, 167, 152, 0.9);/*ボタン色*/
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #288d7e, 0px 2px 0px #157567, 0px 3px 0px #228879;
+}
+
+.button-color-6{
+  background-color: rgba(50, 90, 165, 0.9);/*ボタン色*/
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #173d85, 0px 2px 0px #0f316e, 0px 3px 0px #1e3e7a;
+}
+
+.button-color-7{
+  background-color: rgba(92, 67, 147, 0.9);/*ボタン色*/
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #462a83, 0px 2px 0px #381f70, 0px 3px 0px #40247a;
+}
+
+.button-color-8{
+  background-color: rgba(171, 80, 148, 0.9);/*ボタン色*/
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #8f3d7a, 0px 2px 0px #7e2c69, 0px 3px 0px #8b2f74;
+}
+
+.button-color-9{
+  background-color: rgba(198, 47, 111, 0.9);/*ボタン色*/
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #ac1956, 0px 2px 0px #8f0e44, 0px 3px 0px #97194e;
+}
+
+.number-btn {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* button {
+  list-style: none;
+  width: 40px; flexアイテムの横幅を指定する
+  height: 40px; flexアイテムの高さを指定する
+  margin: 10px; flexアイテムの余白を指定する
+} */
+
 .btnsquare { 
+  font-family: 'Russo One', sans-serif;
+  width: calc(1 / 6 *100%);
+  padding: 20px 0;
   border: none;
   outline: none;
   text-decoration: none;
   font-weight: bold;
-  font-size: 50px;
-  background: rgb(243, 209, 209);/*ボタン色*/
-  color: #799dec;
+  font-size: 30px;
+  background-color: transparent;/*背景透明*/
+  color: #799dec;/*ボタン色*/
   text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;
+
+  /* ハイライト非表示 */
+  -webkit-touch-callout:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 
 .btnsquare:active {
   transform: translateY(4px);/*下に動く*/
   top: 4px;
   text-shadow: none;
+}
+
+.btnsquare:focus{
+  outline: none;
+}
+
+@media(min-width: 768px){
+  .about-item-inner{
+    font-size: 23px;
+  }
+
+  .btnsquare { 
+    font-size: 60px;
+  }
+
+  /* button {
+    list-style: none;
+    width: 80px; flexアイテムの横幅を指定する
+    height: 80px; flexアイテムの高さを指定する
+    margin: 20px;flexアイテムの余白を指定する
+  } */
+
+  .colorbtn{
+    width: 120px;
+    height: 120px;
+
+    font-size: 27px;
+  }
 }

@@ -9,6 +9,8 @@ const socket = io();
 const audioFile = [
   'C.mp3',
   'C2.mp3',
+  'E.mp3',
+  'G.mp3',
 ]
 
 //アニメーションが始まる前の見た目を設定する
@@ -34,6 +36,7 @@ for (let i = 0; i < pathList.length; i++){
       //動かしたい要素や素材
       pathList.item(i),{
         duration: 0.2, //アニメーションする時間
+        fill: msg.color,
         scale: 1,
         opacity: 0.8,
         ease: "power4.inOut",

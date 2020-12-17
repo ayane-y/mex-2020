@@ -6,6 +6,22 @@ svg {
     height: 100%;
     width: 100%;
 }
+.Title{
+    position: fixed;
+    height: 0;
+    z-index: 50;
+}
+
+.Title-images{
+    width: 100px;
+}
+
+.btnURL{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 50;
+}
 
 /* アニメーションが始まる前の状態 */
 circle,path {

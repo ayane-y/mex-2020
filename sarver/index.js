@@ -32,7 +32,6 @@ io.on('connection', (socket) => {
   console.log('ユーザーが接続しました');
 
   for (let i = 0; i <  BUTTON_NUM; i++){
-      //0
     // ユーザーからメッセージを受信した時の処理を.on で登録します
     socket.on(`button${i}Click`, (msg) => {
       // ユーザーからメッセージを受信した時の処理
